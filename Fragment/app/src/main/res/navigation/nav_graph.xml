@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StudentListFragment">
+
+    <fragment
+        android:id="@+id/StudentListFragment"
+        android:name="com.example.baitap.ui.StudentListFragment"
+        android:label="Danh sách sinh viên"
+        tools:layout="@layout/fragment_student_list">
+
+        <action
+            android:id="@+id/action_StudentListFragment_to_StudentDetailFragment"
+            app:destination="@id/StudentDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/StudentDetailFragment"
+        android:name="com.example.baitap.ui.StudentDetailFragment"
+        android:label="Chi tiết sinh viên"
+        tools:layout="@layout/fragment_student_detail">
+
+        <action
+            android:id="@+id/action_StudentDetailFragment_to_StudentListFragment"
+            app:destination="@id/StudentListFragment" />
+    </fragment>
+
+</navigation>

@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,7 +48,9 @@ class StudentListFragment : Fragment() {
 
         binding.rvStudentList.layoutManager = LinearLayoutManager(requireContext())
         binding.rvStudentList.adapter = StudentAdapter(students) { student ->
-            val bundle = bundleOf("student" to student)
+            val bundle = Bundle().apply {
+                putSerializable("student", student)
+            }
             findNavController().navigate(
                 R.id.action_StudentListFragment_to_StudentDetailFragment,
                 bundle

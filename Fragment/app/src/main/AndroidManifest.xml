@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fragment">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.baitap.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Fragment"
             android:windowSoftInputMode="adjustResize">

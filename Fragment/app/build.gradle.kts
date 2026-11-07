@@ -3,15 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.fragment"
-    compileSdk {
-        version = release(37)
-    }
+    namespace = "com.example.baitap"
+    compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.example.fragment"
+        applicationId = "com.example.baitap"
         minSdk = 24
-        targetSdk = 37
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
